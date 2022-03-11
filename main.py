@@ -7,6 +7,7 @@ bot = telebot.TeleBot('5173119245:AAH0U_iIkubcTHgW2K-K8iQayEkKVrB5MlA')
 ivan = 445248738
 anton = 365813198
 anton_channel = -1001606988992
+test_channel = -1001614329550
 
 
 def get_latest_post():
@@ -33,4 +34,6 @@ def get_latest_post():
 if __name__ == '__main__':
     text = get_latest_post()
     if text != 0:
-        bot.send_message(anton_channel, text)
+        bot.send_message(test_channel, text)
+    else:
+        bot.send_message(ivan, 'net novih')
