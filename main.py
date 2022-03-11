@@ -13,7 +13,7 @@ test_channel = -1001614329550
 def get_latest_post():
     r = requests.get('https://vk.com/gisinalolstream')
     soup = BeautifulSoup(r.text, 'html.parser')
-    with open('post.txt', 'r+') as f:
+    with open('/opt/anton_bot/post.txt', 'r+') as f:
         latest_post_id = soup.find_all(class_='pi_author')[0]['data-post-id']
         if latest_post_id == f.readline():
             return 0
@@ -34,6 +34,5 @@ def get_latest_post():
 if __name__ == '__main__':
     text = get_latest_post()
     if text != 0:
-        bot.send_message(test_channel, text)
-    else:
-        bot.send_message(ivan, 'net novih')
+        bot.send_message(anton_channel, text)
+
