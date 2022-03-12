@@ -1,4 +1,4 @@
-DEBUG = True
+DEBUG = False
 
 
 token_prod = '5173119245:AAH0U_iIkubcTHgW2K-K8iQayEkKVrB5MlA'
