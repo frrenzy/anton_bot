@@ -22,14 +22,17 @@ def get_latest_post():
         f.truncate()
         f.write(latest_post_id)
 
-    post_strings = [repr(x).strip("'") for x in latest_post.find(class_='pi_text').strings]
     s = ''
     flag = 0
-    for row in post_strings:
-        if row.startswith('https://') and flag == 0:
-            s += '\n'
-            flag = 1
-        s += row + '\n'
+    try:
+        post_strings = [repr(x).strip("'") for x in latest_post.find(class_='pi_text').strings]
+        for row in post_strings:
+            if row.startswith('https://') and flag == 0:
+                s += '\n'
+                flag = 1
+            s += row + '\n'
+    except AttributeError:
+        s = None
 
     try:
         img_source = latest_post.find('div', class_='thumb_map_img_as_div')['data-src_big']
