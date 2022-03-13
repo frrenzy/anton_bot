@@ -12,7 +12,7 @@ bot = telebot.TeleBot(settings['token'])
 def get_latest_post():
     r = requests.get(settings['group'])
     soup = BeautifulSoup(r.text, 'html.parser')
-    with open('/Users/ivan/PycharmProjects/anton_bot/post.txt', 'r+') as f:
+    with open(settings['post'], 'r+') as f:
         latest_post = soup.find(class_='wall_item')
         latest_post_id = latest_post.find('a', class_='pi_author')['data-post-id']
         f.seek(0)

@@ -11,18 +11,22 @@ group_prod = 'https://vk.com/gisinalolstream'
 group_test = 'https://vk.com/club211430881'
 path_test = '/Users/ivan/Library/Application Support/JetBrains/PyCharm2021.3/scratches/test.jpg'
 path_prod = '/opt/anton_bot/post_pic.jpg'
+post_test = '/Users/ivan/PycharmProjects/anton_bot/post.txt'
+post_prod = '/opt/anton_bot/post.txt'
 
 if DEBUG:
     settings = {
         'token': token_test,
         'channel': channel_test,
         'group': group_test,
-        'img_path': path_test
+        'img_path': path_test,
+        'post': post_test
     }
 else:
     settings = {
         'token': token_prod,
         'channel': channel_prod,
         'group': group_prod,
-        'img_path': path_prod
+        'img_path': path_prod,
+        'post': post_prod
     }
