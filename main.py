@@ -3,7 +3,7 @@ import requests
 import telebot
 from PIL import Image
 from io import BytesIO
-from settings import settings, ivan
+from settings import settings, ivan, anton
 import os
 
 
