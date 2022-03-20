@@ -2,3 +2,8 @@
 /venv/
 /venv/*
 post.txt
+settings.py
+post_pic.jpg
+venv/
+anton_env/
+anton_bot.sh
