@@ -8,3 +8,4 @@ venv
 anton_env/
 anton_bot.sh
 .idea
+__pycache__
