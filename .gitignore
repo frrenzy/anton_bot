@@ -9,3 +9,5 @@ anton_env/
 anton_bot.sh
 .idea
 __pycache__
+.vscode
+.DS_Store
